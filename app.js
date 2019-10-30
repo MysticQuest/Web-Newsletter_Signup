@@ -4,6 +4,9 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
 
+var keyFile = require("./key.js");
+var key = keyFile.key;
+
 const app = express();
 
 app.use(express.static("public"));
@@ -41,12 +44,12 @@ app.post("/", function(req, res) {
   //these are the configuration options of the REQUEST to their API
   //includes simple http auth
   var options = {
-    url: "https://us5.api.mailchimp.com/3.0/lists/MYLISTID",
+    url: "https://us5.api.mailchimp.com/3.0/lists/1a0d578ce7",
     method: "POST",
     headers: {
-      "Authorization": "OTINANAI MYAPI"
+      "Authorization": "kiriakos "+ key
     },
-    //body: jsonData
+    body: jsonData
   };
 
   //this is the request
