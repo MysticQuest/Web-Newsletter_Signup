@@ -35,12 +35,12 @@
   </head>
 
   <body class="text-center">
-    <form class="form-signin">
+    <form action="/" class="form-signin" method="post">
       <img class="mb-4" src="images/logo.png" alt="" width="300" height="300">
       <h1 class="h3 mb-3 font-weight-strong heading">Signup to the Newsletter!</h1>
-      <input type="text" class="form-control top" placeholder="First Name" required autofocus>
-      <input type="text" class="form-control middle" placeholder="Last Name" required autofocus>
-      <input type="email" class="form-control bottom" placeholder="Email address" required autofocus>
+      <input type="text" name="fName" class="form-control top" placeholder="First Name" required autofocus>
+      <input type="text" name="lName" class="form-control middle" placeholder="Last Name" required autofocus>
+      <input type="email" name="email" class="form-control bottom" placeholder="Email address" required autofocus>
 
       <button class="btn btn-lg btn-primary btn-block" type="submit">Sign me up!</button>
       <p class="mt-5 mb-3 text-muted">&copy; 2019-3019</p>
